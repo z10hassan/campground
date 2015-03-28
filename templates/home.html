@@ -58,12 +58,18 @@
 
             <div class="container">
                <ul id="nav">
+                   {% if request.user.is_authenticated %}
+                  <li>
+                     <a href="{% url 'logout' %}" data-description="contact">Logout</a>
+                  </li> <!-- end blogs -->
+                  {% else %}
                   <li>
                      <a href="{% url 'login' %}" data-description="contact">Login</a>
                   </li> <!-- end blogs -->
                   <li>
                      <a href="{% url 'register' %}" data-description="contact">Sign up</a>
                   </li> <!-- end blogs -->
+                  {% endif %}
                   <li>
                      <div class="btn btn-round btn-white btn-listing" href="#"><a href="#">
                       <div class="listing-link">List Campground</div></a></div>
