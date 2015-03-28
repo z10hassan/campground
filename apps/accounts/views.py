@@ -35,12 +35,16 @@ class HomePage(TemplateView):
 def register(request):
     template_name='register.html'
     form=RegisterForm()
-    if form.is_valid():
-        form.save()
-        return redirect('/')
-    else:
-        print "error",form.errors
-        return render_to_response(template_name,{'form':form},context_instance=RequestContext(request))
+    if request.method == 'POST':
+        form=RegisterForm(request.POST)
+        if form.is_valid():
+            password=request.POST.get('pass')
+            form.save(password=password)
+            return redirect('/login/')
+        else:
+            form=RegisterForm(request.POST)
+            print "error",form.errors
+    return render_to_response(template_name,{'form':form},context_instance=RequestContext(request))
 
 
 def user_login(request):

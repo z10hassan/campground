@@ -20,29 +20,32 @@
                 <div class="col-sm-6">
                   <div class="form-group form-group-default">
                     <label>First Name</label>
-                    {{ form.first_name }}{{ form.first_name.errors }}
+                    <input type="text" name="fname" placeholder="Smith" class="form-control" required="" aria-required="true">
                   </div>
+                    <span style="color:red">{{ form.fname.errors }}</span>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group form-group-default">
                     <label>Last Names</label>
-                    {{ form.last_name }}{{ form.last_name.errors }}
+                    <input type="text" name="lname" placeholder="Smith" class="form-control" required="" aria-required="true">
                   </div>
+                    <span style="color:red">{{ form.lname.errors }}</span>
                 </div>
               </div>
               <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group form-group-default">
                     <label>Pages User name</label>
-                    {{ form.username }}{{ form.username.errors }}
+                    <input type="text" name="uname" placeholder="yourname.pages.com (this can be changed later)" class="form-control" required="" aria-required="true">
                   </div>
+                    <span style="color:red">{{ form.uname.errors }}</span>
                 </div>
               </div>
               <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group form-group-default">
                     <label>Password</label>
-                    {{ form.password }}{{ form.password.errors }}
+                    <input type="password" name="pass" placeholder="Minimum of 4 Charactors" class="form-control" required="" aria-required="true">
                   </div>
                 </div>
               </div>
@@ -50,16 +53,18 @@
                 <div class="col-sm-12">
                   <div class="form-group form-group-default">
                     <label>Email</label>
-                    {{ form.email }}{{ form.email.errors }}
+                   <input type="email" name="email" placeholder="We will send loging details to you" class="form-control" required="" aria-required="true">
                   </div>
+                    <span style="color:red">{{ form.email.errors }}</span>
                 </div>
               </div>
               <div class="row m-t-10">
                 <div class="col-md-6">
                   <div class="checkbox ">
-                  <input type="checkbox" value="2" id="checkbox2">
+                  <input type="checkbox" value="2" id="checkbox2" name="term_condition">
                   <label for="checkbox2"><p>I agree to the CampNative<a href="#" class="text-info small"> <strong>Terms and Conditions</strong></a>.</p></label>
                   </div>
+                    {{ form.term_condition.errors }}
                 </div>
               </div>
               <button class="btn btn-primary m-t-10" type="submit">Create a new account</button>
