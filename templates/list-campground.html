@@ -11,38 +11,100 @@
 <section id="main-content" class="container">
 
 <!-- Start Page Content -->
-
     <div class="col-sm-5">
       <div class="container-sm-height full-height">
         <div class="row row-sm-height">
           <div class="col-sm-12 col-sm-height col-middle">
             <h3>List a CampGround</h3>
-                {% if success %}
+            <p>
+              {% if success %}
                   <h4>{{success}}</h4>
                 {% endif %}
-            <p>
               <small>
               Create a CampGround. If you have seen your campground already on our site please claim instead of Creating New one!
               </small>
             </p>
+            <form id="form-list-campground" class="p-t-15" role="form" action="" novalidate="novalidate" method="POST">
+            <form action="" method="post" id="form-list-campground" class="p-t-15">{% csrf_token %}
+
+              <input type="hidden" name="campground_longitude" placeholder="Enter CampGround Longitude" class="form-control" required="" aria-required="true" id="custom-long">
+
+               <input type="hidden" name="campground_latitude" placeholder="Enter CampGround Latitude" class="form-control" required="" aria-required="true" id="custom-lat">
+                
               <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group form-group-default">
-                      <form action="" method="post">{% csrf_token %}
-                          {{ form.as_p }}
-                          <div class="row aligncenter">
-                              <button class="text-center btn btn-primary m-t-10" type="submit">Create CampGround</button>
-                          </div>
-                      </form>
+                    <label>Name</label>
+                    {{ form.campground_name.errors.as_text }}
+                    <input type="text" name="campground_name"  placeholder="Your CampGround Name(this can be changed later)" class="form-control" required="" aria-required="true">
                   </div>
                 </div>
               </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group form-group-default">
+                    <label>Address (
+                      <span id="latitude" class="label label-default"></span> <span id="longitude" class="label label-default"></span> )
+                    </label>
+                    {{ form.campground_address.errors.as_text }}
+                    {{ form.campground_latitude.errors.as_text }}
+                    {{ form.campground_longitude.errors.as_text }}
+                    <input type="text" name="campground_address" id="address" placeholder="Enter CampGround Addres" autocomplete="off" class="form-control" required="" aria-required="true">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group form-group-default">
+                    <label>Phone</label>
+                    {{ form.campground_phone.errors.as_text }}
+                    <input type="text" name="campground_phone" placeholder="Enter CampGround Phone Number" class="form-control" required="" aria-required="true">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group form-group-default">
+                    <label>ZIP</label>
+                    {{ form.campground_zip.errors.as_text }}
+                    <input type="text" name="campground_zip" placeholder="Enter CampGround zip" class="form-control" required="" aria-required="true">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group form-group-default">
+                    <label>Email</label>
+                    {{ form.campground_email.errors.as_text }}
+                    <input type="text" name="campground_email" placeholder="Enter CampGround Email" class="form-control" required="" aria-required="true" id="email_change">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group form-group-default">
+                    <label>Description</label>
+                    {{ form.campground_description.errors.as_text }}
+                    <input type="text" name="campground_description" placeholder="Enter CampGround Description" class="form-control" required="" aria-required="true">
+                  </div>
+                </div>
+              </div>
+              <div class="row m-t-10">
+                <div class="col-md-6">
+                  <div class="checkbox ">
+                  <input type="checkbox" value="2" id="checkbox2">
+                  <label for="checkbox2"><p>I agree to the CampNative<a href="#" class="text-info small"> <strong>Terms and Conditions</strong></a>.</p></label>
+                  </div>
+                </div>
+              </div>
+              <div class="row aligncenter">
+              <button class="text-center btn btn-primary m-t-10" type="submit">Create CampGround</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
   </div> <!-- end col-sm-8 -->
-
-
 <div class="col-sm-7">
   <div id="mapView" class="mob-min">
     <div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...
@@ -69,6 +131,33 @@
         <script src="{{ STATIC_URL }}js/jquery.tagsinput.min.js"></script>
         <script src="{{ STATIC_URL }}js/fileinput.min.js"></script>
         <script src="{{ STATIC_URL }}js/app-list.js"></script>
+        <script type="text/javascript">
+
+
+    $( document ).ready(function() {
+    
+        $('#checkbox2').val(true);
+
+      $("#address" ).change(function() {
+        var lat_value = $('#latitude').text();
+        var lon_value = $('#latitude').text();
+        $('#custom-long').val(lat_value);
+        $('#custom-lat').val(lon_value);
+
+      });
+
+      $("#email_change" ).change(function() {
+     
+        var lat_value = $('#latitude').text();
+        var lon_value = $('#latitude').text();
+        $('#custom-long').val(lat_value);
+        $('#custom-lat').val(lon_value);
+
+    });
+
+    });
+
+    </script>
 <!-- end container -->
 <!--  End of the Page Content
 

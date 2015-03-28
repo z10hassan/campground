@@ -234,8 +234,11 @@
             google.maps.event.addListener(newMarker, "mouseup", function(event) {
                 var latitude = this.position.lat();
                 var longitude = this.position.lng();
-                $('#latitude').text(this.position.lat());
+                $('#latitude').val(this.position.lat());
                 $('#longitude').text(this.position.lng());
+                $('#custom-long').val(longitude);
+                $('#custom-lat').val(latitude);
+                console.log('>>>>>>>>>>>>')
             });
         }
 
@@ -398,8 +401,11 @@
             }
             newMarker.setPosition(place.geometry.location);
             newMarker.setVisible(true);
-            $('#latitude').text(newMarker.getPosition().lat());
+            $('#latitude').val(newMarker.getPosition().lat());
             $('#longitude').text(newMarker.getPosition().lng());
+            $('#custom-long').val(newMarker.getPosition().lat());
+            $('#custom-lat').val(newMarker.getPosition().lng());
+
 
             return false;
         });
