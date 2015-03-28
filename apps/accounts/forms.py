@@ -1,5 +1,7 @@
 from django import forms
+from django.forms import ModelForm
 from django.contrib.auth.models import User
+from models import Campground
 
 class RegisterForm(forms.ModelForm):
 
@@ -21,3 +23,10 @@ class RegisterForm(forms.ModelForm):
         print "ssss",self.cleaned_data.get('username')
         username=self.cleaned_data.get('username')
         return details
+
+
+class CampgroundModelForm(forms.ModelForm):
+
+    class Meta:
+        model = Campground
+        exclude = ['user', 'timestamp']

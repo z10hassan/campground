@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<!DOCTYPE html>
+<body class="review">
+<div id="wrap">
+
+
+
+<section id="main-content" class="container">
+
+<!-- Start Page Content -->
+
+    <div class="col-sm-5">
+      <div class="container-sm-height full-height">
+        <div class="row row-sm-height">
+          <div class="col-sm-12 col-sm-height col-middle">
+            <h3>List a CampGround</h3>
+                {% if success %}
+                  <h4>{{success}}</h4>
+                {% endif %}
+            <p>
+              <small>
+              Create a CampGround. If you have seen your campground already on our site please claim instead of Creating New one!
+              </small>
+            </p>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group form-group-default">
+                      <form action="" method="post">{% csrf_token %}
+                          {{ form.as_p }}
+                          <div class="row aligncenter">
+                              <button class="text-center btn btn-primary m-t-10" type="submit">Create CampGround</button>
+                          </div>
+                      </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div> <!-- end col-sm-8 -->
+
+
+<div class="col-sm-7">
+  <div id="mapView" class="mob-min">
+    <div class="mapPlaceholder"><span class="fa fa-spin fa-spinner"></span> Loading map...
+    </div>
+  </div> 
+  </div> <!-- end col-sm-8 -->
+
+   </section>
+      <hr class="vertical-space4">
+
+
+<!--  End of the Settings Page
+   ================================================== -->
+
+</div><!-- /content -->
+</section> <!-- end container -->
+<!--  End of the Page Content
+
+{% endblock %}
