@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block content %}
+<section id="main-content" class="container">
+      <!-- Start Page Content -->
+
+            <div class="tabs tabs-style-flip">
+               <nav>
+                  <ul>
+                     <li><a href="" class="icon icon-home"><span>Profile</span></a></li>
+                     <li><a href="" class="icon icon-box"><span>Visited Areas</span></a></li>
+                     <li><a href="" class="icon icon-display"><span>Dream Campsites</span></a></li>
+                     <li tab-current ><a href="" class="icon icon-tools"><span>Settings</span></a></li>
+                  </ul>
+               </nav>
+               <hr>
+
+
+<!-- Start of the Profile Content -->
+      <section id="section--flip-1">
+         <hr class="vertical-space1">
+            <div class="col-sm-4">
+               <article class="our-team">
+                  <figure><img src="{{ STATIC_URL }}images/passport/avatar.jpg" alt=""></figure>
+                  <h2>Yo Young Money</h2>
+                  <hr class="vertical-space">
+                     <div class="col-xs-6">
+                        <h4>Native</h4>
+                     </div>
+                     <div class="col-xs-6">
+                        <a href="{% url 'logout' %}" class="logoutbutton">Logout My Account</a>
+                     </div>
+               </article> <!-- end of profile man -->
+            </div> <!-- end col-sm-8 -->
+
+
+            <div class="col-sm-8">
+               <article class="callout">
+                  Welcome
+                  <a class="callurl" href="#">
+                     <i class="fa fa-facebook-square fa-lg"></i> Connect</a>
+                  <h3>Brian, </h3>
+                  <hr>
+                  <div class="sub-content">
+                     <h6 class="h-sub-content">Badges</h6>
+                  </div>
+                  <ul id="our-clients" class="our-clients ">
+                     <li><img src="{{ STATIC_URL }}images/passport/badges/sample.png" alt=""></li>
+                     <li><img src="{{ STATIC_URL }}images/passport/badges/sample.png" alt=""></li>
+                     <li><img src="{{ STATIC_URL }}images/passport/badges/sample.png" alt=""></li>
+                     <li><img src="{{ STATIC_URL }}images/passport/badges/sample.png" alt=""></li>
+                     <li><img src="{{ STATIC_URL }}images/passport/badges/sample.png" alt=""></li>
+                     <li><img src="{{ STATIC_URL }}images/passport/badges/sample.png" alt=""></li>
+                     <li><img src="{{ STATIC_URL }}images/passport/badges/sample.png" alt=""></li>
+                     <li><img src="{{ STATIC_URL }}images/passport/badges/sample.png" alt=""></li>
+                     <li><img src="{{ STATIC_URL }}images/passport/badges/sample.png" alt=""></li>
+                     <li><img src="{{ STATIC_URL }}images/passport/badges/sample.png" alt=""></li>
+                  </ul>
+                  <div class="sub-content">
+                     <h6 class="h-sub-content">Stamps</h6>
+                  </div>
+                     <div class="alert alert-info"><button type="button" class="close" data-dismiss="alert">×</button>Heads up! You have never been to anywhere you'll get one once you do!  </div>
+               </article> <!-- end of callout -->
+            </div> <!-- end col-sm-8 -->
+      </section>
+
+
+<!-- end of the profile page -->
+
+
+   </div><!-- /tabs -->
+</section> <!-- end container -->
+
+{% endblock %}
