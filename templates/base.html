@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+
+   <!-- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+   <title>Login / Register</title>
+   <meta name="description" content="Explore the Latest CampGround the United States">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+   <!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" type="text/css"  media="all">
+   <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/tabs.css" />
+   <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/passport.css" />
+
+   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,400italic,400,300,600,700,900|Varela|Arapey:400,400italic' rel="stylesheet" type='text/css' >
+
+   <!-- JS
+   ================================================== -->
+   <script src="{{ STATIC_URL }}js/jquery.min.js" type="text/javascript"></script>
+   <script src="{{ STATIC_URL }}layerslider/js/greensock.js" type="text/javascript"></script>
+   <!--[if lt IE 9]>
+   <script src="./js/modernizr.custom.11889.js" type="text/javascript"></script>
+   <script src="./js/respond.js" type="text/javascript"></script>
+   <![endif]-->
+   <!-- HTML5 Shiv events (end)-->
+   <!-- MEGA MENU -->
+
+   <!-- Favicons
+   ================================================== -->
+   <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.ico">
+
+</head>
+<body class="register">
+<div id="wrap">
+
+<!-- Primary Page Layout
+================================================== -->
+      <!-- Header -->
+    <header id="header" class="horizontal-w sm-rgt-mn">
+      <div  class="container">
+         <div class="col-md-3 col-sm-3 logo-wrap">
+            <div class="logo">
+               <a href="index.html"><img src="{{ STATIC_URL }}images/homepage/reg-logo.png" width="130" id="img-logo-w1" alt="logo" class="img-logo-w1"></a>
+               <a href="index.html"><img src="{{ STATIC_URL }}images/homepage/reg-logo.png" width="130" id="img-logo-w2" alt="logo" class="img-logo-w2"></a>
+               <span class="logo-sticky"><a href="index.html"><img src="{{ STATIC_URL }}images/homepage/logo_sticky.png" width="60" id="img-logo-w3" alt="logo" class="img-logo-w3"></a></span>
+            </div> <!-- end logo -->
+         </div> <!-- end col-md-3 -->
+         <nav id="nav-wrap" class="nav-wrap1 col-md-9 col-sm-9">
+            <div class="container">
+               <div class="woo-cart-header">
+                  <a class="header-cart" href="#"></a>
+                  <div class="woo-cart-dropdown">
+                     <ul class="cart-list product-list-widget">
+                        <li>Sign up and Sign in Buttons!</li>
+                     </ul>
+                     <a href="#" class="qbutton white view-cart">Logout </a>
+                     <span class="total">Status:<span class="amount">Native</span></span>
+                  </div>
+               </div> <!-- end woo cart header -->
+               <div id="search-form">
+                  <a href="javascript:void(0)" class="search-form-icon"><i id="searchbox-icon" class="fa-search"></i></a>
+                  <div id="search-form-box" class="search-form-box">
+                     <form action="#" method="get">
+                        <input type="text" class="search-text-box" id="search-box" name="s">
+                     </form>
+                  </div>
+               </div> <!-- end search form -->
+               <ul id="nav">
+                    <li class="current">
+                        <a href="#" data-description="start here">
+                          <i class="fa-file-text"></i>Home
+                        </a>
+                     </li>
+                     <li>
+                        <a href="explore.html" data-description="places">
+                          <i class="fa-search"></i>Explore
+                        </a>
+                     </li> <!-- end blogs -->
+                     <li>
+                        <a href="#" data-description="logbook">
+                          <i class="fa-book"></i>Log Book
+                        </a>
+                     </li> <!-- end blogs -->
+                     <li>
+                        <a href="#" data-description="about">
+                          <i class="fa-users"></i>About
+                        </a>
+                     </li> <!-- end blogs -->
+                     <li>
+                        <a href="#" data-description="contact">
+                          <i class="fa-envelope-o"></i>Contact
+                        </a>
+                     </li> <!-- end blogs -->
+               </ul> <!-- end #nav -->
+            </div>
+         </nav> <!-- end navigation -->
+      </div> <!-- end container -->
+   </header> <!-- end header -->
+
+<hr>
+
+{% block content %}{% endblock %}
+
+<hr class="vertical-space4">
+
+
+<!--  End of the Settings Page
+   ================================================== -->
+
+</div><!-- /content -->
+</section> <!-- end container -->
+<!--  End of the Page Content
+   ================================================== -->
+   <section class="blox dark blox4">
+   <hr class="vertical-space4">
+      <div class="container">
+          <div class="col-sm-12">
+             <div class="col-sm-3 brdr-r1">
+                <hr class="vertical-space2">
+                <img width="237" height="61" src="{{ STATIC_URL }}images/homepage/homepagelogo1x.png" alt="logo-drk">
+                <hr class="vertical-space1">
+                <hr class="vertical-space">
+             </div> <!-- end col-sm-3 -->
+             <div class="col-sm-3 brdr-r1">
+                <article class="icon-box3">
+                   <i class="fa-anchor"></i>
+                   <h4></h4>
+                </article>
+                <div class="aligncenter custom-footer-menu">
+                   <a href="#">About</a>
+                   <a href="#">Jobs</a>
+                   <a href="#">Partners</a>
+                   <a href="#">Press</a>
+
+                </div>
+                <hr class="vertical-space1">
+             </div> <!-- end col-sm-3 -->
+             <div class="col-sm-3 brdr-r1">
+                <article class="icon-box3">
+                   <i class="fa-phone"></i>
+                   <h4>Let's Connect</h4>
+                </article>
+                <p class="aligncenter">Call us at <strong>(123) 456578</strong></p>
+                <p class="aligncenter">and email us:<br>
+                   <strong>info@camptnative.com</strong>
+                </p>
+                <hr class="vertical-space1">
+             </div> <!-- end col-sm-3 -->
+             <div class="col-md-3">
+            <div class="widget">
+               <article class="icon-box3">
+                   <i class="fa-share-square"></i>
+                   <h4>Let's get Social</h4>
+                </article>
+               <div class="socialfollow">
+                  <a href="#" class="twitter"><i class="fa-twitter"></i></a><a href="#" class="facebook"><i class="fa-facebook"></i></a><a href="#" class="dribble"><i class="fa-dribbble"></i></a><a href="#" class="google"><i class="fa-google"></i></a><a href="#" class="instagram"><i class="fa-instagram"></i></a>
+               </div>
+            </div>
+         </div>
+          </div> <!-- end col-sm-12 -->
+       </div> <!-- end container -->
+   </section>
+
+   <span id="scroll-top"><a class="scrollup"><i class="fa-chevron-up"></i></a></span>
+
+</div> <!-- end Wrap -->
+
+   <!-- End Document
+   ================================================== -->
+
+   <!-- JS
+   ================================================== -->
+   <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.plugins.js"></script>
+   <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.masonry.min.js"></script>
+   <script type="text/javascript" src="{{ STATIC_URL }}js/mediaelement-and-player.min.js"></script>
+   <script type="text/javascript" src="{{ STATIC_URL }}js/isotope.js"></script>
+   <script src="{{ STATIC_URL }}js/sticky-custom.js" type="text/javascript"></script>
+   <script type="text/javascript" src="{{ STATIC_URL }}js/campnative-custom.js"></script>
+   <script src="{{ STATIC_URL }}js/modernizr.custom.js"></script>
+   <script src="{{ STATIC_URL }}js/cbpFWTabs.js"></script>
+   <script src="{{ STATIC_URL }}js/jquery.validate.min.js" type="text/javascript"></script>
+   <!-- page level js which only aplies to this page -->
+   <script>
+      $(function()
+      {
+        $('#form-login').validate()
+        $('#form-register').validate()
+      })
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+How to Configure:
+
+This Project Runs with DJango 1.7 and Mysql
+
+For installing the required packages create virtualenvironment and run:
+
+pip install -r requirements.txt
+
+For Migrating Database Run:
+
+python manage.py migrate
+
+
+Running project:
+
+python manage.py runserver
+

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+<section id="main-content" class="container">
+<!-- Start Page Content -->
+  <hr class="vertical-space1">
+<div class="col-sm-5">
+    <div class="container-sm-height full-height">
+        <div class="row row-sm-height">
+          <div class="col-sm-12 col-sm-height col-middle">
+            <h3>Login to Existing Account</h3>
+            <p>
+              <small>
+              By Logging you can do things like review a campground, add a campground to your dream list and lot more,
+              </small>
+            </p>
+            {% if messages %}
+            <span style="color:red">{% for message in messages %}{{ message }}{% endfor %}</span>
+            {% endif %}
+            <form id="form-login" class="p-t-15" role="form" action="." method="post" novalidate="novalidate">
+                {% csrf_token %}
+            <!-- START Form Control-->
+            <div class="form-group form-group-default">
+              <label>Login</label>
+              <div class="controls">
+                <input type="text" id="email" name="username" placeholder="Email" class="form-control" required="" aria-required="true">
+              </div>
+            </div>
+            <!-- END Form Control-->
+            <!-- START Form Control-->
+            <div class="form-group form-group-default">
+              <label>Password</label>
+              <div class="controls">
+                <input type="password" class="form-control" name="password" placeholder="Credentials" required="" aria-required="true">
+              </div>
+            </div>
+            <!-- START Form Control-->
+            <div class="row">
+              <div class="col-md-6 ">
+                <div class="checkbox ">
+                  <input type="checkbox" value="1" id="checkbox1">
+                  <label for="checkbox1">Keep Me Signed in</label>
+                </div>
+              </div>
+              <div class="col-md-6 text-right ">
+                <a href="#" class="text-info small">Help? Forgot Password</a>
+              </div>
+            </div>
+            <hr class="vertical-space">
+            <!-- END Form Control-->
+            <button class="medium" type="submit">Sign in</button>
+            <button class="button medium  bordered-bot" type="submit"><i class="fa fa-facebook"></i>Connect</button>
+
+          </form>
+        </div> <!-- end col-sm-8 -->
+
+   </section>
+      <hr class="vertical-space4">
+</div><!-- /content -->
+</section> <!-- end container -->
+
+{% endblock %}

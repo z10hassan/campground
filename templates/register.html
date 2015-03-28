@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section id="main-content" class="container">
+<!-- Start Page Content -->
+  <hr class="vertical-space1">
+    <div class="col-sm-7 align-center">
+      <div class="container-sm-height full-height">
+        <div class="row row-sm-height">
+          <div class="col-sm-12 col-sm-height col-middle">
+            <h3>Create a Account</h3>
+            <p>
+              <small>
+              Create a CampNative account. If you have a facebook account, log into it for this process. Sign in with <a href="#" class="text-info">Facebook</a> or <a href="#" class="text-info">Google</a>
+              </small>
+            </p>
+            <form id="form-register" class="p-t-15" role="form" action="." method="post" novalidate="novalidate">
+                {% csrf_token %}
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group form-group-default">
+                    <label>First Name</label>
+                    {{ form.first_name }}{{ form.first_name.errors }}
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group form-group-default">
+                    <label>Last Names</label>
+                    {{ form.last_name }}{{ form.last_name.errors }}
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group form-group-default">
+                    <label>Pages User name</label>
+                    {{ form.username }}{{ form.username.errors }}
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group form-group-default">
+                    <label>Password</label>
+                    {{ form.password }}{{ form.password.errors }}
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group form-group-default">
+                    <label>Email</label>
+                    {{ form.email }}{{ form.email.errors }}
+                  </div>
+                </div>
+              </div>
+              <div class="row m-t-10">
+                <div class="col-md-6">
+                  <div class="checkbox ">
+                  <input type="checkbox" value="2" id="checkbox2">
+                  <label for="checkbox2"><p>I agree to the CampNative<a href="#" class="text-info small"> <strong>Terms and Conditions</strong></a>.</p></label>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-primary m-t-10" type="submit">Create a new account</button>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div> <!-- end col-sm-8 -->
+
+   </section>
+{% endblock %}
