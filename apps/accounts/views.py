@@ -34,13 +34,13 @@ class HomePage(TemplateView):
 
 def register(request):
     template_name='register.html'
-    form=RegisterForm
-    if form.is_valid()
+    form=RegisterForm()
+    if form.is_valid():
         form.save()
         return redirect('/')
     else:
         print "error",form.errors
-        return render_to_response(self.template_name,{'form':form},context_instance=RequestContext(request))
+        return render_to_response(template_name,{'form':form},context_instance=RequestContext(request))
 
 
 def user_login(request):
